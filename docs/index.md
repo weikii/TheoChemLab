@@ -7,13 +7,24 @@ TheoChem Lab is a Windows application for molecular visualization, crystal struc
 
 ## What It Provides
 
-- Molecular and crystal visualization for files such as Gaussian input/output, MOL2, CIF, and project documents
-- Project-based organization for calculation files and structures
-- Crystal tools for packing inspection, periodic-boundary repair, cell display, and local environment growth
-- Gaussian-oriented tools for inspecting structures and extracting values used by downstream analysis
-- Electronic coupling and hopping-rate workflows for molecular pairs
-- Anisotropic mobility visualization based on crystal packing and charge hopping parameters
-- Online update support for authorized internal builds
+<div class="doc-card-grid">
+  <div class="doc-card">
+    <h3>3D Structure Work</h3>
+    <p>Open, inspect, select, measure, draw, style, and render molecular or crystal structures.</p>
+  </div>
+  <div class="doc-card">
+    <h3><a href="files/">Files and Projects</a></h3>
+    <p>Keep structures, calculation files, notes, tables, diagrams, imports, and exports together in one project.</p>
+  </div>
+  <div class="doc-card">
+    <h3>Crystal Preparation</h3>
+    <p>Repair periodic molecules, inspect cells, grow visible environments, and prepare packing views.</p>
+  </div>
+  <div class="doc-card">
+    <h3>Charge Transport</h3>
+    <p>Combine Gaussian-derived parameters, electronic coupling, hopping rates, and anisotropic mobility plots.</p>
+  </div>
+</div>
 
 ## Intended Users
 

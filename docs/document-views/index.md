@@ -2,16 +2,37 @@
 
 TheoChem Lab uses document views for the different kinds of project content.
 
+The application also has interface views such as Project View, Properties View, Output, and Job View. Those are described under [Main Interface Overview](../work-areas/main-interface.md).
+
 ## Project Document Types
 
-| Document type | Typical extension | Main purpose |
-| --- | --- | --- |
-| 3D Structure Document | `.wsd` | Molecular and crystal visualization, editing, selection, measurement, and analysis context |
-| Text Document | `.txtdoc` | Notes, logs, plain text, and text output |
-| Table Document | `.tbldoc` | Tabular data and copied/exported results |
-| Diagram Document | `.dgmdoc` | Plotted data and exported diagram data |
+<div class="doc-card-grid">
+  <div class="doc-card">
+    <h3><a href="3d-structure-viewer/">3D Structure Viewer</a></h3>
+    <p>Primary `.wsd` view for molecular and crystal visualization, editing, selection, measurement, and analysis context.</p>
+  </div>
+  <div class="doc-card">
+    <h3><a href="text-table-diagram/">Text Documents</a></h3>
+    <p>Notes, logs, plain text, copied output, and saved text results.</p>
+  </div>
+  <div class="doc-card">
+    <h3><a href="text-table-diagram/">Table and Diagram Views</a></h3>
+    <p>Tabular data, plotted values, copied results, CSV exports, and diagram data.</p>
+  </div>
+  <div class="doc-card">
+    <h3><a href="data-and-surface-files/">Data Sources</a></h3>
+    <p>Cube, surface, Gaussian, and wavefunction data used as inputs to visualization tools.</p>
+  </div>
+</div>
 
-The exact extension names are managed by the application, but the visible document type names above are the names shown to users.
+The native document extensions are:
+
+| Extension | Document type |
+| --- | --- |
+| `.wsd` | 3D Structure Document |
+| `.txd` | Text Document |
+| `.tbd` | Table Document |
+| `.dgd` | Diagram Document |
 
 ## Non-Document Data Files
 

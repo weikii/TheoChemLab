@@ -4,56 +4,39 @@ The main workspace is the central working area after a project is opened.
 
 ## Main Areas
 
-- **Menu bar**: access file, editing, display, build, analysis, module, window, and help commands.
-- **Toolbars**: quick access to common structure operations such as save, undo, redo, camera control, optimization, drawing, measurement, and frame playback.
-- **Document area**: displays open document views.
-- **Dockable views**: Project View, Properties View, Output, and Job View.
+<div class="doc-card-grid">
+  <div class="doc-card">
+    <h3><a href="../work-areas/main-interface/">Document Area</a></h3>
+    <p>The central area where 3D structures, text documents, tables, diagrams, and result viewers open.</p>
+  </div>
+  <div class="doc-card">
+    <h3><a href="project-view/">Project View</a></h3>
+    <p>The project tree for opening, organizing, and creating project files and documents.</p>
+  </div>
+  <div class="doc-card">
+    <h3><a href="../work-areas/properties-view/">Properties View</a></h3>
+    <p>The property editor for selected atoms, bonds, crystals, surfaces, fragments, measurements, and documents.</p>
+  </div>
+  <div class="doc-card">
+    <h3><a href="../work-areas/output-and-jobs/">Output and Jobs</a></h3>
+    <p>Output logs, clickable result links, job status, progress, gateway, server, and timing information.</p>
+  </div>
+</div>
+
+## Working Order
+
+For a new user, the main workspace is best understood in this order:
+
+1. Use **Project View** to open or create project documents.
+2. Work in the **Document Area**, usually with a 3D Structure Viewer.
+3. Use **Properties View** to inspect or edit the current selection.
+4. Watch **Output** and **Job View** for calculation messages and running tasks.
+5. Use the **menu bar** and **toolbar** for commands.
+
+## Command Areas
+
+- **Menu bar**: access file, view, edit, display, build, tools, modules, window, and help commands.
+- **Toolbars**: quick access to save, undo/redo, camera control, measurement, optimization, drawing, hydrogen update, and frame playback.
 - **Status bar**: shows live status such as atom count and rendering information.
 
-## File Menu
-
-Use **File > Open...** to import or open supported files. Use **Save** and **Save As...** to store project documents.
-
-Supported structure import types include:
-
-- `.wsd`: TheoChem Lab 3D structure document
-- `.mol`, `.mol2`, `.gjf`, `.sdf`, `.xsd`, `.xyz`, `.arc`: molecular structures
-- `.cif`, `.pdb`, `.gro`, `.inp`: crystal or periodic structures
-
-## View Menu
-
-Use **View** to reopen utility panes:
-
-- **Project View**
-- **Properties View**
-- **Output**
-- **Job View**
-
-These panes support the active document but are not themselves the main data document.
-
-## Display Menu
-
-Use **Display > Style** and **Display > Style Manager** to control how atoms, bonds, crystals, surfaces, planes, labels, lights, and camera settings are drawn.
-
-Built-in and user styles can be applied to the current document or all open documents.
-
-## Build Menu
-
-The **Build** menu contains structure-construction and structure-editing commands:
-
-- **Atoms**: add atoms by element, coordinates, charge, label, and optional virtual-atom style.
-- **Bonds**: generate strong bonds or weak interactions.
-- **Faces**: create planes or faces, including crystallographic planes when crystal data is available.
-- **Molecule**: build molecule templates and molecular fragments.
-- **Crystal**: build crystals, create supercells, make molecules whole, compact molecule placement, and run symmetry tools.
-- **Structure Frame Sequence**: create and edit multi-frame structure sequences.
-
-## Tools and Modules
-
-The **Tools** and **Modules** menus contain workflow-specific forms. These include Gaussian tools, Multiwfn-based visualization, anisotropic mobility, surface interaction, MD simulation, CP2K, MolPack, and Hirshfeld-surface workflows.
-
-Some entries are experimental during internal testing.
-
-## Help Menu
-
-Use **Help > Online documents** to open this documentation site. **Check for updates** queries the configured update source for authorized builds.
+See [Menus and Toolbars](../modules/index.md) for command-by-command details.

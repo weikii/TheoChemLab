@@ -12,11 +12,11 @@ The electronic coupling workflow supports charge-transport analysis for molecula
 
 ## What the Value Means
 
-Electronic coupling, usually written as `V`, describes the strength of charge transfer between two neighboring molecules. In the current documentation, `V` is treated as an input to hopping-rate and mobility models rather than as a standalone final result.
+Electronic coupling, usually written as \(V\), describes the strength of charge transfer between two neighboring molecules. In the current documentation, \(V\) is treated as an input to hopping-rate and mobility models rather than as a standalone final result.
 
 For a complete charge-transport workflow, electronic coupling should be combined with:
 
-- Reorganization energy `lambda`
+- Reorganization energy \(\lambda\)
 - Molecular-pair distance and orientation
 - Temperature
 - A defined crystal plane or reference direction when directional mobility is calculated
@@ -25,7 +25,15 @@ For a complete charge-transport workflow, electronic coupling should be combined
 
 The older TheoChem Lab help files referenced the electronic-coupling treatment described by:
 
-Edward F. Valeev, Veaceslav Coropceanu, Demetrio A. da Silva Filho, Seyhan Salman, and Jean-Luc Bredas, "Effect of Electronic Polarization on Charge-Transport Parameters in Molecular Organic Semiconductors", *Journal of the American Chemical Society*, 2006, 128, 9882-9886.
+<div class="reference-list">
+  <div class="reference-item">
+    <span class="reference-index">[1]</span>
+    Edward F. Valeev, Veaceslav Coropceanu, Demetrio A. da Silva Filho, Seyhan Salman, and Jean-Luc Bredas,
+    "<a href="https://doi.org/10.1021/ja061827h">Effect of Electronic Polarization on Charge-Transport Parameters in Molecular Organic Semiconductors</a>",
+    <em>Journal of the American Chemical Society</em>, 2006, 128, 9882-9886.
+    <a class="doi-link" href="https://doi.org/10.1021/ja061827h">DOI: 10.1021/ja061827h</a>
+  </div>
+</div>
 
 ## Status
 

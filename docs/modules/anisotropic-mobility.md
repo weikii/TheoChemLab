@@ -8,7 +8,7 @@ It is intended for molecular crystals where charge transport is described as hop
 
 1. Select a center molecule.
 2. Add neighboring molecular pairs.
-3. Enter reorganization energy and electronic coupling values.
+3. Enter reorganization energy \(\lambda\) and electronic coupling \(V\).
 4. Define the reference plane.
 5. Generate directional mobility plots and export results.
 
@@ -16,51 +16,59 @@ It is intended for molecular crystals where charge transport is described as hop
 
 Open a crystal structure, make molecules whole if needed, then select the molecule used as the center of the packing analysis. In the module window, use **Use Selection** to register the selected molecule.
 
-![Center molecule selection](../assets/images/anisotropic-center-selection.png){ width="560" }
+![Center molecule selection](../assets/images/anisotropic-center-selection.png){ width="460" }
 
 ## 2. Add Packing Pairs
 
 Select a neighboring molecular pair that includes the center molecule, then add it to the packing-pair table. Repeat this for all relevant neighboring pairs.
 
-![Packing pair selection](../assets/images/anisotropic-pair-selection.png){ width="560" }
+![Packing pair selection](../assets/images/anisotropic-pair-selection.png){ width="460" }
 
 Each pair stores the parameters used by the mobility model:
 
-- `lambda`: reorganization energy in eV
-- `V`: electronic coupling in eV
-- `R`: centroid distance in angstrom
-- `theta`: in-plane angle relative to the reference axis
-- `gamma`: out-of-plane tilt relative to the selected crystal plane
-- `W`: hopping rate
-- `W_i`: normalized hopping probability contribution
+- \(\lambda\): reorganization energy in eV
+- \(V\): electronic coupling in eV
+- \(R\): centroid distance in angstrom
+- \(\theta\): in-plane angle relative to the reference axis
+- \(\gamma\): out-of-plane tilt relative to the selected crystal plane
+- \(W\): hopping rate
+- \(W_i\): normalized hopping probability contribution
 
-![Packing pair table](../assets/images/anisotropic-packing-pairs.png){ width="520" }
+![Packing pair table](../assets/images/anisotropic-packing-pairs.png){ width="460" }
 
 ## 3. Define the Reference Plane
 
-Use **Search best plane** or set the plane manually. The reference plane defines how molecular-pair vectors are projected into a 2D transport map. For common crystal analysis this is often the `ab` plane, but the correct choice depends on the crystal and the intended comparison.
+Use **Search best plane** or set the plane manually. The reference plane defines how molecular-pair vectors are projected into a 2D transport map. For common crystal analysis this is often the \(ab\) plane, but the correct choice depends on the crystal and the intended comparison.
 
 The reference axis controls the zero-angle direction of the polar plot. If automatic reference-axis selection is enabled, the module chooses an axis from the current plane information.
 
-The advanced page controls plane-search and output settings such as whether only main `hkl` planes are used, search depth, export size, and angular step.
+The advanced page controls plane-search and output settings such as whether only main \(hkl\) planes are used, search depth, export size, and angular step.
 
-![Advanced settings](../assets/images/anisotropic-advanced-settings.png){ width="560" }
+![Advanced settings](../assets/images/anisotropic-advanced-settings.png){ width="460" }
 
 ## 4. Generate and Export Results
 
 The module displays a polar mobility plot. Right-click the plot to export a picture or the underlying data when export commands are available.
 
-![Anisotropic mobility plot](../assets/images/anisotropic-mobility-plot.png){ width="560" }
+![Anisotropic mobility plot](../assets/images/anisotropic-mobility-plot.png){ width="480" }
 
-![Plot export menu](../assets/images/anisotropic-export-menu.png){ width="260" }
+![Plot export menu](../assets/images/anisotropic-export-menu.png){ width="220" }
 
 ## Theory
 
-The workflow follows the charge hopping model used in studies of anisotropic mobility in organic semiconductor crystals. The older TheoChem Lab help files referenced:
+The workflow follows the charge hopping model used in studies of anisotropic mobility in organic semiconductor crystals.
 
-Shu-Hao Wen, Ai Li, Jian Song, Wen-Qing Deng, Ke-Li Han, and William A. Goddard III, "First-principles investigation of anisotropic hole mobilities in organic semiconductors", *Journal of Physical Chemistry B*, 2009, 113, 8813-8819.
+<div class="reference-list">
+  <div class="reference-item">
+    <span class="reference-index">[1]</span>
+    Shu-Hao Wen, An Li, Junling Song, Wei-Qiao Deng, Ke-Li Han, and William A. Goddard III,
+    "<a href="https://doi.org/10.1021/jp900512s">First-principles investigation of anisotropic hole mobilities in organic semiconductors</a>",
+    <em>Journal of Physical Chemistry B</em>, 2009, 113, 8813-8819.
+    <a class="doi-link" href="https://doi.org/10.1021/jp900512s">DOI: 10.1021/jp900512s</a>
+  </div>
+</div>
 
-The hopping rate `W` is calculated from a Marcus-Hush expression using electronic coupling `V`, reorganization energy `lambda`, temperature `T`, and the Boltzmann constant `k_B`.
+The hopping rate \(W\) is calculated from a Marcus-Hush expression using electronic coupling \(V\), reorganization energy \(\lambda\), temperature \(T\), and the Boltzmann constant \(k_B\).
 
 $$
 W =
@@ -74,7 +82,7 @@ W =
 \right)
 $$
 
-For example, with `V = 0.08 eV`, `lambda = 0.15 eV`, and `T = 300 K`, the older help calculation gives a hopping rate of approximately `6.49 x 10^13 s^-1`.
+For example, with \(V = 0.08\ \mathrm{eV}\), \(\lambda = 0.15\ \mathrm{eV}\), and \(T = 300\ \mathrm{K}\), the older help calculation gives a hopping rate of approximately \(6.49 \times 10^{13}\ \mathrm{s}^{-1}\).
 
 $$
 W =
@@ -125,16 +133,16 @@ $$
 
 In this expression:
 
-- `r_i` is the centroid vector between the center molecule and neighbor `i`
-- `P_i` is the normalized hopping probability for path `i`
-- `gamma_i` is the out-of-plane tilt angle
-- `theta_i` is the in-plane azimuthal angle
-- `Phi` is the direction in which mobility is evaluated
+- \(r_i\) is the centroid vector between the center molecule and neighbor \(i\)
+- \(P_i\) is the normalized hopping probability for path \(i\)
+- \(\gamma_i\) is the out-of-plane tilt angle
+- \(\theta_i\) is the in-plane azimuthal angle
+- \(\Phi\) is the direction in which mobility is evaluated
 
 ## Practical Notes
 
 The result is only as reliable as the molecular-pair list and the parameters supplied for each pair. Before comparing plots, confirm that the same plane convention, temperature, and pair-selection strategy were used.
 
-Temperature is part of the hopping-rate calculation, so changing it changes all derived rates and mobility values.
+Temperature \(T\) is part of the hopping-rate calculation, so changing it changes all derived rates and mobility values.
 
-![Temperature control](../assets/images/anisotropic-temperature-control.png){ width="220" }
+![Temperature control](../assets/images/anisotropic-temperature-control.png){ width="180" }

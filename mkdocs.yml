@@ -22,7 +22,7 @@ theme:
         name: Switch to light mode
   features:
     - navigation.sections
-    - navigation.expand
+    - navigation.indexes
     - navigation.top
     - toc.follow
     - search.suggest
@@ -30,26 +30,69 @@ theme:
 
 nav:
   - Home: index.md
-  - Installation: installation.md
-  - Start and Workspace:
-      - Getting Started: getting-started.md
-      - Welcome Screen: start/welcome.md
-      - Main Workspace: start/main-workspace.md
+  - Quick Start:
+      - start/index.md
+      - Launch and Projects:
+          - Welcome Screen: start/welcome.md
+          - Getting Started: getting-started.md
+      - Workspace Basics:
+          - Main Workspace: start/main-workspace.md
+          - Project View: start/project-view.md
+  - Files and Projects:
+      - File System Overview: files/index.md
+      - Internal Document Types:
+          - 3D Structure Viewer (.wsd): files/3d-structure-document.md
+          - Text Document (.txd): files/text-document.md
+          - Table Document (.tbd): files/table-document.md
+          - Diagram Document (.dgd): files/diagram-document.md
+      - Opening and Importing: files/open-and-import.md
+      - Saving and Exporting: files/save-and-export.md
+  - Interface:
+      - Main Interface Overview: work-areas/main-interface.md
       - Project View: start/project-view.md
-  - Document Views:
-      - Overview: document-views/index.md
-      - 3D Structure Viewer: document-views/3d-structure-viewer.md
-      - Text, Table, and Diagram Views: document-views/text-table-diagram.md
-      - Data and Surface Files: document-views/data-and-surface-files.md
-  - User Interface Reference: user-interface.md
-  - Modules:
-      - Overview: modules/index.md
-      - Crystal Tools: modules/crystal-tools.md
-      - Gaussian Tools: modules/gaussian-tools.md
-      - Electronic Coupling: modules/electronic-coupling.md
-      - Anisotropic Mobility: modules/anisotropic-mobility.md
-  - Updates: updates.md
-  - Terms: terms.md
+      - Properties View: work-areas/properties-view.md
+      - Output and Jobs Views: work-areas/output-and-jobs.md
+      - Toolbar Reference: modules/toolbar-reference.md
+  - Work Areas:
+      - document-views/index.md
+      - Document Viewers:
+          - 3D Structure Viewer: document-views/3d-structure-viewer.md
+          - Text, Table, and Diagram Views: document-views/text-table-diagram.md
+      - Data Sources:
+          - Data and Surface Files: document-views/data-and-surface-files.md
+      - Reference:
+          - User Interface Reference: user-interface.md
+  - Menus and Toolbars:
+      - modules/index.md
+      - File / View / Edit:
+          - File, View, and Edit Menus: modules/file-view-edit.md
+          - Selection, Fragments, and Display: modules/selection-fragments-display.md
+      - Display:
+          - Display and Style Menus: modules/display-menu.md
+      - Build:
+          - Build and Edit Structures: modules/build-and-edit.md
+          - Crystal Tools: modules/crystal-tools.md
+      - Tools:
+          - Surface and Volume Data: modules/surface-and-volume.md
+          - Multiwfn and ESP Tools: modules/multiwfn-esp.md
+          - Pair Manager: modules/pair-manager.md
+          - Anisotropic Mobility: modules/anisotropic-mobility.md
+          - PXRD and Tensor Visualization: modules/pxrd-and-tensors.md
+      - Modules:
+          - Gaussian Tools: modules/gaussian-tools.md
+          - Gaussian Calculation: modules/gaussian-calculation.md
+          - Gaussian Analysis: modules/gaussian-analysis.md
+          - Electronic Coupling: modules/electronic-coupling.md
+          - MD and Gromacs: modules/md-and-gromacs.md
+          - MolPack: modules/molpack.md
+          - CP2K Tools: modules/cp2k-tools.md
+      - Help:
+          - Updates: updates.md
+  - Release and Access:
+      - Installation: installation.md
+      - Updates: updates.md
+      - Terms: terms.md
+      - About: about.md
 
 markdown_extensions:
   - admonition
@@ -65,3 +108,6 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css

@@ -31,8 +31,17 @@ theme:
 nav:
   - Home: index.md
   - Installation: installation.md
-  - Getting Started: getting-started.md
-  - User Interface: user-interface.md
+  - Start and Workspace:
+      - Getting Started: getting-started.md
+      - Welcome Screen: start/welcome.md
+      - Main Workspace: start/main-workspace.md
+      - Project View: start/project-view.md
+  - Document Views:
+      - Overview: document-views/index.md
+      - 3D Structure Viewer: document-views/3d-structure-viewer.md
+      - Text, Table, and Diagram Views: document-views/text-table-diagram.md
+      - Data and Surface Files: document-views/data-and-surface-files.md
+  - User Interface Reference: user-interface.md
   - Modules:
       - Overview: modules/index.md
       - Crystal Tools: modules/crystal-tools.md
@@ -46,7 +55,13 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

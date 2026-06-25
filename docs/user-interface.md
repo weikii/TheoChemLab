@@ -1,17 +1,26 @@
 # User Interface
 
-TheoChem Lab is organized around a main structure viewer and several dockable utility views.
+TheoChem Lab is organized around a main workspace, project documents, and several dockable utility views.
 
-## Main Viewer
+This page is a compact reference. For a step-by-step path from startup to document windows, see [Getting Started](getting-started.md).
 
-The main viewer displays molecules, crystals, surfaces, orbitals, and annotation objects. It is also the main place for structure selection, measurement, and crystal-context commands.
+## Main Workspace
 
-Common viewer operations include:
+The main workspace contains the menu bar, toolbars, document tabs/windows, and status information such as atom count and frame rate.
 
-- Rotate, pan, and zoom the active structure
-- Select atoms, molecules, or molecular pairs
-- Display or hide crystal-cell information
-- Open context menus for structure-specific commands
+Core menus include:
+
+- **File**: open files, save documents, and open application settings
+- **View**: show or hide Project View, Properties View, Output, and Job View
+- **Edit**: undo, redo, selection, fragments, groups, and preferences
+- **Display**: style and element-color controls
+- **Build**: atoms, bonds, faces, molecules, crystal tools, and structure frame sequences
+- **Tools** and **Modules**: analysis and external-workflow tools
+- **Help**: online documentation, update checks, and About
+
+## 3D Structure Viewer
+
+The 3D Structure Viewer displays molecules, crystals, surfaces, orbitals, and annotation objects. It is also the main place for structure selection, measurement, and crystal-context commands.
 
 ## Project View
 

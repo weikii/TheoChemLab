@@ -16,13 +16,13 @@ It is intended for molecular crystals where charge transport is described as hop
 
 Open a crystal structure, make molecules whole if needed, then select the molecule used as the center of the packing analysis. In the module window, use **Use Selection** to register the selected molecule.
 
-![Center molecule selection](../assets/images/anisotropic-center-selection.png)
+![Center molecule selection](../assets/images/anisotropic-center-selection.png){ width="560" }
 
 ## 2. Add Packing Pairs
 
 Select a neighboring molecular pair that includes the center molecule, then add it to the packing-pair table. Repeat this for all relevant neighboring pairs.
 
-![Packing pair selection](../assets/images/anisotropic-pair-selection.png)
+![Packing pair selection](../assets/images/anisotropic-pair-selection.png){ width="560" }
 
 Each pair stores the parameters used by the mobility model:
 
@@ -34,7 +34,7 @@ Each pair stores the parameters used by the mobility model:
 - `W`: hopping rate
 - `W_i`: normalized hopping probability contribution
 
-![Packing pair table](../assets/images/anisotropic-packing-pairs.png)
+![Packing pair table](../assets/images/anisotropic-packing-pairs.png){ width="520" }
 
 ## 3. Define the Reference Plane
 
@@ -44,15 +44,15 @@ The reference axis controls the zero-angle direction of the polar plot. If autom
 
 The advanced page controls plane-search and output settings such as whether only main `hkl` planes are used, search depth, export size, and angular step.
 
-![Advanced settings](../assets/images/anisotropic-advanced-settings.png)
+![Advanced settings](../assets/images/anisotropic-advanced-settings.png){ width="560" }
 
 ## 4. Generate and Export Results
 
 The module displays a polar mobility plot. Right-click the plot to export a picture or the underlying data when export commands are available.
 
-![Anisotropic mobility plot](../assets/images/anisotropic-mobility-plot.png)
+![Anisotropic mobility plot](../assets/images/anisotropic-mobility-plot.png){ width="560" }
 
-![Plot export menu](../assets/images/anisotropic-export-menu.png)
+![Plot export menu](../assets/images/anisotropic-export-menu.png){ width="260" }
 
 ## Theory
 
@@ -62,27 +62,66 @@ Shu-Hao Wen, Ai Li, Jian Song, Wen-Qing Deng, Ke-Li Han, and William A. Goddard 
 
 The hopping rate `W` is calculated from a Marcus-Hush expression using electronic coupling `V`, reorganization energy `lambda`, temperature `T`, and the Boltzmann constant `k_B`.
 
-![Electronic hopping rate](../assets/images/electronic-hopping-rate.png)
+$$
+W =
+\frac{V^2}{\hbar}
+\left(
+\frac{\pi}{\lambda k_B T}
+\right)^{1/2}
+\exp
+\left(
+-\frac{\lambda}{4 k_B T}
+\right)
+$$
 
 For example, with `V = 0.08 eV`, `lambda = 0.15 eV`, and `T = 300 K`, the older help calculation gives a hopping rate of approximately `6.49 x 10^13 s^-1`.
 
-![Hopping-rate example](../assets/images/hopping-rate-example.png)
+$$
+W =
+\frac{(0.08)^2}{6.582119 \times 10^{-16}}
+\left(
+\frac{\pi}{0.15 \times 8.617333 \times 10^{-5} \times 300}
+\right)^{1/2}
+\exp
+\left(
+-\frac{0.15}{4 \times 8.617333 \times 10^{-5} \times 300}
+\right)
+$$
 
 For each packing path, the hopping probability is normalized from the individual hopping rates.
 
-![Hopping probability](../assets/images/hopping-probability.png)
+$$
+P_i = \frac{W_i}{\sum_i W_i}
+$$
 
 The diffusion coefficient is estimated from the molecular-pair displacement vectors and their hopping probabilities.
 
-![Diffusion coefficient](../assets/images/diffusion-coefficient.png)
+$$
+D =
+\lim_{t \to \infty}
+\frac{1}{2n}
+\frac{\left\langle x(t)^2 \right\rangle}{t}
+\approx
+\frac{1}{2n}
+\sum_i r_i^2 W_i P_i
+$$
 
 Mobility is then related to diffusion through the Einstein relation.
 
-![Einstein mobility relation](../assets/images/einstein-mobility.png)
+$$
+\mu = \frac{e}{k_B T} D
+$$
 
 The directional mobility is obtained by summing the contribution of each hopping path after projecting it into the selected plane and reference direction.
 
-![Directional mobility equation](../assets/images/directional-mobility.png)
+$$
+\mu_\Phi =
+\frac{e}{2 k_B T}
+\sum_i
+W_i r_i^2 P_i
+\cos^2 \gamma_i
+\cos^2(\theta_i - \Phi)
+$$
 
 In this expression:
 
@@ -98,4 +137,4 @@ The result is only as reliable as the molecular-pair list and the parameters sup
 
 Temperature is part of the hopping-rate calculation, so changing it changes all derived rates and mobility values.
 
-![Temperature control](../assets/images/anisotropic-temperature-control.png)
+![Temperature control](../assets/images/anisotropic-temperature-control.png){ width="220" }

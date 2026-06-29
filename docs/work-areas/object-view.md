@@ -1,33 +1,68 @@
 # Object View
 
-Object View lists the objects in the currently selected 3D Structure Viewer document.
+Object View is the object browser for open 3D structure documents. Use it when you want to find atoms, bonds, fragments, measurements, surfaces, or other scene objects without searching in the 3D view by eye.
 
-## Viewer Selector
+## Viewer
 
-The top control is labeled **Viewer:** and lists open `.wsd` structure viewers. Selecting a viewer changes which document Object View displays.
+Use **Viewer:** to choose which open `.wsd` document is shown in Object View. The list contains open 3D Structure Viewer windows.
 
-The refresh command is an icon button. It reloads the object tree for the selected viewer.
+When you activate another 3D structure window, Object View follows that window. Use the refresh icon if the list does not look current after a large edit or file operation.
 
-When the viewer list is open, timed refreshes are deferred so the list does not change while the user is choosing a viewer. After the final selection is confirmed, Object View updates to the selected viewer.
+## Object Groups
 
-## Object Tree
+Objects are arranged by type. Common groups include:
 
-The tree groups scene objects by type, such as atoms, bonds, measurements, fragments, surfaces, vectors, centroids, and crystal objects.
+| Group | What it contains |
+| --- | --- |
+| **Atom** | Atoms in the structure |
+| **Bond** | Bonds and bond-like connections |
+| **Distance / Angle** | Measurement objects |
+| **Fragment** | Saved molecule or atom fragments |
+| **Crystal Structure** | Crystal-related objects and cell data |
+| **Surface** | Loaded or generated surface objects |
+| **Plane / Box / Vector / Centroid** | Scene objects used for analysis and annotation |
 
-Expanded groups show their child objects with compact columns for object-specific details. Very large groups are loaded in batches so opening a document with many atoms or bonds does not need to draw every child node at once.
+The number after a group name is the number of objects in that group.
 
-For large groups:
+## Opening Large Groups
 
-- The first batch is loaded when the group is expanded.
-- A range placeholder such as `1001-2000...` marks the next batch.
-- When the placeholder becomes visible, the next batch is loaded automatically.
+Click the expand button beside a group to show its objects.
 
-## Selection And Editing
+Large groups are loaded in parts. If you see an entry such as `1001-2000...`, more objects are available. Scroll to that entry and Object View continues loading the next part of the group.
 
-Selecting an object node selects the corresponding object in the active 3D viewer when possible. Double-clicking object nodes focuses or activates the corresponding viewer object.
+This keeps large structures usable while still letting you inspect individual objects when needed.
 
-The context menu and keyboard commands provide object-level actions such as deleting selected objects or clearing a group. Destructive actions ask for confirmation before changing the document.
+## Selecting Objects
 
-## Refresh Behavior
+Click an object or group in Object View to select it in the tree.
 
-Object View follows changes in open `.wsd` viewers and updates the tree when the object collection changes. It avoids heavy child-node work until a group is expanded, which keeps large documents responsive while still showing correct group counts.
+Use the right-click **Select** command to select the matching object or group contents in the 3D Structure Viewer.
+
+You can select more than one tree row:
+
+- Use **Ctrl** to add or remove individual rows from the tree selection.
+- Use **Shift** to select a visible range of rows.
+
+After selecting several object rows, right-click one of the selected rows and use **Select** to send the combined object selection to the 3D viewer.
+
+## Deleting Objects
+
+Right-click an object row and choose **Delete** to remove that object from the document.
+
+Right-click a group row and choose **Delete** to remove all objects in that group. TheoChem Lab asks for confirmation before deleting.
+
+Use group deletion carefully. For example, deleting a bond group removes the listed bonds from the structure, and deleting a measurement group removes the saved measurement objects.
+
+## Object Details
+
+Expanded rows may show compact details beside the object name, such as distance values, atom labels, or other object-specific information.
+
+Some detail columns can be resized from the header area when the cursor changes to the resize shape.
+
+## Typical Uses
+
+- Check how many atoms, bonds, measurements, or fragments are in the active structure.
+- Select all objects of one type, such as all measurements or all fragments.
+- Find a specific atom or measurement in a large document.
+- Remove generated objects after an analysis step.
+- Switch between several open `.wsd` viewers without closing the pane.

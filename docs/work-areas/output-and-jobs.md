@@ -1,34 +1,20 @@
-# Output and Jobs Views
+# Output And Jobs
 
-Output View and Job View monitor application messages and background calculation jobs.
+Output View and Job View show short messages and running tasks.
 
 ## Output View
 
-Output View is a short message pane. It records compact application messages such as a calculation being submitted, warnings, and clickable viewer links.
+Output View is for brief notices, not detailed calculation results. For example, it may show that an xTB calculation has been submitted or that a command generated a related viewer link.
 
-It supports:
+When a message contains a viewer link such as `Viewer: name.wsd`, click it to return to that document. You can also copy text from the pane.
 
-- Copying text
-- Clickable text spans
-- Clickable viewer links such as `Viewer: name.wsd`
-- Filtering output by a viewer link
-- Showing all output again after filtering
-
-Output View is not the main calculation-result window. Detailed calculation results should open in a document viewer, usually a Text Viewer, Table Viewer, Diagram Viewer, or 3D Structure Viewer result document.
-
-## Clickable Viewer Links
-
-When a short message contains a viewer reference, it can be made clickable. This helps jump back to the document related to the message.
-
-Right-clicking a viewer link can filter the output to messages related to that viewer. Use **Show all output** to clear the filter.
+Detailed results are opened as normal project documents, such as Text Viewer, Table Viewer, Diagram Viewer, or 3D Structure Viewer documents.
 
 ## Job View
 
-Job View is a table of background or external jobs.
+Job View shows background tasks in a table. Use it to check whether a calculation is running, finished, stopped, or failed.
 
-The right side is the job table. The side toolbar provides icon commands for refreshing the table, stopping jobs, opening a job folder, copying a summary, removing jobs, and clearing finished jobs.
-
-Columns include:
+The table includes:
 
 | Column | Meaning |
 | --- | --- |
@@ -41,19 +27,19 @@ Columns include:
 | **Start Time** | Time the job started |
 | **Time Cost** | Elapsed time |
 
-Rows are selectable. Commands that require a selected job are enabled only after a row is selected. When no row is selected, stop and remove can operate on all jobs when jobs exist, after user confirmation.
+Select a row to work with a specific job. The side buttons can refresh the table, stop a job, open its folder, copy a summary, remove jobs, or clear finished jobs.
 
-The table is intended for monitoring and job operations, not for editing. Sorting is disabled so job order stays stable.
+If no row is selected, stop and remove can apply to all jobs when jobs exist. TheoChem Lab asks for confirmation before stopping or removing jobs.
 
 ## xTB Jobs
 
-xTB geometry optimization, molecular dynamics, single point, and related local calculations can be registered as jobs. Job View shows their description, job id, gateway, local xTB backend, status, progress, start time, and elapsed time.
+xTB geometry optimization, molecular dynamics, single point, and related local calculations appear in Job View.
 
-Temporary xTB run folders include the job id in the folder name. The job folder command opens the run folder when one is available.
+xTB jobs may have a temporary run folder. Use the folder button to open it when it is available.
 
-## Typical Use
+## Recommended Workflow
 
 - Start a calculation or generation tool.
-- Watch Job View for running status and progress.
-- Read Output View only for short messages such as submission notices.
-- Open detailed results from the generated project documents or result viewers.
+- Use Output View only for short notices.
+- Use Job View to monitor and stop running work.
+- Open the generated project documents to read detailed results.

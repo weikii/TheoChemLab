@@ -28,9 +28,9 @@ The project view lists project files and generated results. It is intended for r
 
 ## Object View
 
-Object View shows the object tree for the selected open `.wsd` viewer. Its **Viewer:** selector lists open structure viewers, and the icon refresh command reloads the tree for the selected viewer.
+Object View shows atoms, bonds, measurements, surfaces, and other objects in the selected open `.wsd` viewer. Use **Viewer:** to choose the structure window you want to inspect, and use the refresh icon when the list needs to be reloaded.
 
-Large object groups are loaded in batches while scrolling or expanding the tree, so group counts remain visible without drawing every object node at once.
+Large object groups are shown progressively, so very large structures can still be browsed from the tree.
 
 ## Properties View
 

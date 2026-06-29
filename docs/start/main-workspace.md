@@ -19,7 +19,7 @@ The main workspace is the central working area after a project is opened.
   </div>
   <div class="doc-card">
     <h3><a href="../work-areas/object-view/">Object View</a></h3>
-    <p>The object tree for the selected open 3D structure viewer, with lazy loading for large object groups.</p>
+    <p>Browse atoms, bonds, measurements, surfaces, and other objects in the selected 3D structure viewer.</p>
   </div>
   <div class="doc-card">
     <h3><a href="../work-areas/output-and-jobs/">Output and Jobs</a></h3>

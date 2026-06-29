@@ -50,6 +50,7 @@ nav:
   - Interface:
       - Main Interface Overview: work-areas/main-interface.md
       - Project View: start/project-view.md
+      - Object View: work-areas/object-view.md
       - Properties View: work-areas/properties-view.md
       - Output and Jobs Views: work-areas/output-and-jobs.md
       - Toolbar Reference: modules/toolbar-reference.md
@@ -62,6 +63,7 @@ nav:
           - Data and Surface Files: document-views/data-and-surface-files.md
       - Reference:
           - User Interface Reference: user-interface.md
+          - External API: reference/external-api.md
   - Menus and Toolbars:
       - modules/index.md
       - File / View / Edit:

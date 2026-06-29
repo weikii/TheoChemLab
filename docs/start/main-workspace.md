@@ -18,8 +18,12 @@ The main workspace is the central working area after a project is opened.
     <p>The property editor for selected atoms, bonds, crystals, surfaces, fragments, measurements, and documents.</p>
   </div>
   <div class="doc-card">
+    <h3><a href="../work-areas/object-view/">Object View</a></h3>
+    <p>The object tree for the selected open 3D structure viewer, with lazy loading for large object groups.</p>
+  </div>
+  <div class="doc-card">
     <h3><a href="../work-areas/output-and-jobs/">Output and Jobs</a></h3>
-    <p>Output logs, clickable result links, job status, progress, gateway, server, and timing information.</p>
+    <p>Short output messages, clickable viewer links, job status, progress, gateway, server, and timing information.</p>
   </div>
 </div>
 
@@ -29,9 +33,10 @@ For a new user, the main workspace is best understood in this order:
 
 1. Use **Project View** to open or create project documents.
 2. Work in the **Document Area**, usually with a 3D Structure Viewer.
-3. Use **Properties View** to inspect or edit the current selection.
-4. Watch **Output** and **Job View** for calculation messages and running tasks.
-5. Use the **menu bar** and **toolbar** for commands.
+3. Use **Object View** to browse objects in the selected structure viewer.
+4. Use **Properties View** to inspect or edit the current selection.
+5. Watch **Output** for short messages and **Job View** for running tasks.
+6. Use the **menu bar** and **toolbar** for commands.
 
 ## Command Areas
 

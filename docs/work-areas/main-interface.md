@@ -8,9 +8,10 @@ TheoChem Lab's main interface is built from a central document area plus dockabl
 | --- | --- |
 | **Project View** | Project tree, folders, project documents, imported files, generated outputs |
 | **Document Area** | Open viewers such as 3D Structure Viewer, Text Viewer, Table Viewer, Diagram Viewer, and analysis result windows |
+| **Object View** | Object tree for the selected open `.wsd` viewer |
 | **Properties View** | Property editor for the active document or selected object |
-| **Output View** | Text output, logs, clickable document links, and command messages |
-| **Job View** | Running or completed background calculation jobs |
+| **Output View** | Short messages, submission notices, and clickable document links |
+| **Job View** | Running, completed, stopped, or failed background calculation jobs |
 | **Menu Bar** | Main command structure, grouped by software menu |
 | **Toolbar** | Quick access to frequent document and structure operations |
 | **Status Bar** | Atom count, rendering status, and other live state |
@@ -18,18 +19,18 @@ TheoChem Lab's main interface is built from a central document area plus dockabl
 ## Main Working Loop
 
 <div class="workflow-strip">
-  Project View -> Document Area -> Properties View -> Output / Job View
+  Project View -> Document Area -> Object View / Properties View -> Output / Job View
 </div>
 
 1. Choose or create files from **Project View**.
 2. Work inside the **Document Area**.
-3. Select objects and edit them in **Properties View**.
-4. Read messages in **Output View**.
-5. Track long-running tasks in **Job View**.
+3. Navigate structure objects in **Object View** when a `.wsd` viewer is open.
+4. Select objects and edit them in **Properties View**.
+5. Read short messages in **Output View** and track long-running tasks in **Job View**.
 
 ## Dockable Views
 
-Project View, Properties View, Output, and Job View are dockable panes. If one is closed, reopen it from the **View** menu.
+Project View, Object View, Properties View, Output, and Job View are dockable panes. If one is closed, reopen it from the **View** menu.
 
 The docked views support the active document. They are not replacements for project documents:
 

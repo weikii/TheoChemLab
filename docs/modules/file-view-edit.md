@@ -18,8 +18,9 @@ Supported structure formats include `.wsd`, `.mol`, `.mol2`, `.gjf`, `.sdf`, `.x
 | --- | --- |
 | **Project View** | Show the project tree and project document navigator. |
 | **Properties View** | Show editable properties for the selected object, document, or crystal. |
-| **Output** | Show logs, messages, clickable viewer links, and calculation output. |
-| **Job View** | Show background or external calculation jobs. |
+| **Object View** | Show the object tree for the selected open `.wsd` viewer. |
+| **Output** | Show short messages, submission notices, and clickable viewer links. |
+| **Job View** | Show and manage background or external calculation jobs. |
 | **Align Camera to Axis** | Align the camera to crystal axes \(a\), \(b\), or \(c\) when available. |
 
 ## Edit
